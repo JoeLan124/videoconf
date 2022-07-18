@@ -33,6 +33,13 @@ export default function Room() {
       >
         Room
       </h1>
+
+      <p className="mt-20 mb-20 text-center text-3xl font-black">
+        Share this link to join the room: <br />
+        <a href={`/room/${id}/join`} className="underline">
+          http://localhost:3000/room/{id}/join
+        </a>
+      </p>
       <div className="flex">
         <video id="local" autoPlay playsInline muted></video>
         <video id="remote" autoPlay playsInline></video>
