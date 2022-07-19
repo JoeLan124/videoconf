@@ -42,12 +42,8 @@ export default function Join() {
       </button>
 
       <div className="flex">
-        {visible && (
-          <p className="text-black text-center text-2xl">
-            hallo hier bist du nicht
-          </p>
-        )}
-        <video id="local" autoPlay playsInline muted></video>
+        {visible && <video id="local" autoPlay playsInline muted></video>}
+
         <video id="remote" autoPlay playsInline></video>
       </div>
     </>

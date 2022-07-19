@@ -56,10 +56,7 @@ export default function Room() {
       </button>
 
       <div className="flex">
-        {visible && (
-          <p className="text-black text-center text-2xl">Hallo hier bin ich</p>
-        )}
-        <video id="local" autoPlay playsInline muted></video>
+        {visible && <video id="local" autoPlay playsInline muted></video>}
         <video id="remote" autoPlay playsInline></video>
       </div>
     </>
