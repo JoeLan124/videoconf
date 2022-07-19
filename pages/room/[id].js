@@ -1,9 +1,11 @@
 import Script from "next/script";
 import { useRouter } from "next/router";
+import { useState } from "react";
 
 export default function Room() {
   const router = useRouter();
   const { id } = router.query;
+  const { visible, setvisible } = useState(true);
 
   return (
     <>
@@ -40,8 +42,18 @@ export default function Room() {
           https://videoconf-drab.vercel.app:3000/room/{id}/join
         </a>
       </p>
+
+      <button
+        className="block mx-auto bg-blue text-white p-3 rounded-2xl mt-20 text-2xl"
+        onClick={() => {
+          setvisible(!visible);
+        }}
+      >
+        Show or hide your video
+      </button>
       <div className="flex">
-        <video id="local" autoPlay playsInline muted></video>
+        {visible && <video id="local" autoPlay playsInline muted></video>}
+
         <video id="remote" autoPlay playsInline></video>
       </div>
     </>

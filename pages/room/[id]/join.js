@@ -1,9 +1,11 @@
 import Script from "next/script";
 import { useRouter } from "next/router";
+import { useState } from "react";
 
 export default function Join() {
   const router = useRouter();
   const { id } = router.query;
+  const { visible, setvisible } = useState(true);
 
   return (
     <>
@@ -27,8 +29,16 @@ export default function Join() {
       <h1 className="mt-20 mb-20 text-center text-3xl uppercase font-black">
         Room invite
       </h1>
+      <button
+        className="block mx-auto bg-blue text-white p-3 rounded-2xl mt-20 text-2xl"
+        onClick={() => {
+          setvisible(!visible);
+        }}
+      >
+        Show or hide your video
+      </button>
       <div className="flex">
-        <video id="local" autoPlay playsInline muted></video>
+        {visible && <video id="local" autoPlay playsInline muted></video>}
         <video id="remote" autoPlay playsInline></video>
       </div>
     </>
