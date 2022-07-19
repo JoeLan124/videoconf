@@ -48,13 +48,17 @@ export default function Room() {
       </p>
 
       <button
-        className="block mx-auto bg-blue h-12 w-12 text-black p-3 rounded-2xl mt-20 text-2xl"
-        onClick={showandhidehandler()}
+        className="mt-20 text-center text-3xl uppercase 
+					font-black"
+        onClick={showandhidehandler}
       >
-        hallo {visible}
+        set visibility
       </button>
+
       <div className="flex">
-        {visible && <p className="text-black">Hallo hier bin ich</p>}
+        {visible && (
+          <p className="text-black text-center text-2xl">Hallo hier bin ich</p>
+        )}
         <video id="local" autoPlay playsInline muted></video>
         <video id="remote" autoPlay playsInline></video>
       </div>
