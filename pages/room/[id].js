@@ -54,7 +54,7 @@ export default function Room() {
         Show or hide your video
       </button>
       <div className="flex">
-        {visible && <p>hallo ich bin da</p>}
+        {visible && <p className="text-black">{visible}</p>}
         <video id="local" autoPlay playsInline muted></video>
         <video id="remote" autoPlay playsInline></video>
       </div>
