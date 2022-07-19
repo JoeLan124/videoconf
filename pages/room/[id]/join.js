@@ -9,7 +9,9 @@ export default function Join() {
 
   const showandhidehandler = () => {
     setvisible(!visible);
-    window.location.reload();
+    if (visible) {
+      window.location.reload();
+    }
   };
 
   return (
