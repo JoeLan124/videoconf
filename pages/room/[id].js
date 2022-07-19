@@ -48,7 +48,7 @@ export default function Room() {
       </p>
 
       <button
-        className="block mx-auto bg-blue text-white p-3 rounded-2xl mt-20 text-2xl"
+        className="block mx-auto bg-blue text-black p-3 rounded-2xl mt-20 text-2xl"
         onClick={showandhidehandler}
       >
         Show or hide your video

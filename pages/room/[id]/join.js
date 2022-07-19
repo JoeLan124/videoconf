@@ -34,11 +34,12 @@ export default function Join() {
         Room invite
       </h1>
       <button
-        className="block mx-auto bg-blue text-white p-3 rounded-2xl mt-20 text-2xl"
+        className="block mx-auto bg-blue text-black p-3 rounded-2xl mt-20 text-2xl"
         onClick={showandhidehandler}
       >
         Show or hide your video
       </button>
+
       <div className="flex">
         {visible && <p className="text-black">hallo ich bin da</p>}
         <video id="local" autoPlay playsInline muted></video>
