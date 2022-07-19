@@ -7,6 +7,10 @@ export default function Room() {
   const { id } = router.query;
   const { visible, setvisible } = useState(true);
 
+  const showandhidehandler = () => {
+    setvisible(!visible);
+  };
+
   return (
     <>
       <Script
@@ -45,9 +49,7 @@ export default function Room() {
 
       <button
         className="block mx-auto bg-blue text-white p-3 rounded-2xl mt-20 text-2xl"
-        onClick={() => {
-          setvisible(!visible);
-        }}
+        onClick={showandhidehandler}
       >
         Show or hide your video
       </button>
