@@ -34,10 +34,10 @@ export default function Join() {
         Room invite
       </h1>
       <button
-        className="block mx-auto bg-blue text-black p-3 rounded-2xl mt-20 text-2xl"
-        onClick={showandhidehandler}
+        className="block mx-auto bg-blue h-12 w-12 text-black p-3 rounded-2xl mt-20 text-2xl"
+        onClick={showandhidehandler()}
       >
-        {visible}
+        hallo {visible}
       </button>
 
       <div className="flex">
