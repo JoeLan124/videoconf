@@ -37,11 +37,11 @@ export default function Join() {
         className="block mx-auto bg-blue text-black p-3 rounded-2xl mt-20 text-2xl"
         onClick={showandhidehandler}
       >
-        Show or hide your video
+        {visible}
       </button>
 
       <div className="flex">
-        {visible && <p className="text-black">{visible}</p>}
+        {visible && <p className="text-black">hallo hier bist du nicht</p>}
         <video id="local" autoPlay playsInline muted></video>
         <video id="remote" autoPlay playsInline></video>
       </div>
