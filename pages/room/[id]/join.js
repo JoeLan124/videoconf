@@ -5,7 +5,7 @@ import { useState } from "react";
 export default function Join() {
   const router = useRouter();
   const { id } = router.query;
-  const { visible, setvisible } = useState(true);
+  const [visible, setvisible] = useState(true);
 
   const showandhidehandler = () => {
     setvisible(!visible);
