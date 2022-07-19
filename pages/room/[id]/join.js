@@ -40,7 +40,8 @@ export default function Join() {
         Show or hide your video
       </button>
       <div className="flex">
-        {visible && <video id="local" autoPlay playsInline muted></video>}
+        {visible && <p>hallo ich bin da</p>}
+        <video id="local" autoPlay playsInline muted></video>
         <video id="remote" autoPlay playsInline></video>
       </div>
     </>
