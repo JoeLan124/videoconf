@@ -8,7 +8,9 @@ export default function Room() {
   const [visible, setvisible] = useState(true);
 
   const showandhidehandler = () => {
-    setvisible(!visible);
+    let newvisiblestatus = !visible;
+    setvisible(newvisiblestatus);
+    window.location.reload();
   };
 
   return (
