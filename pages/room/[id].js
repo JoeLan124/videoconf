@@ -54,8 +54,9 @@ export default function Room() {
         onClick={showandhidehandler}
       >
         set visibility
-        {visible}
       </button>
+
+      {!visible && <p>not visible</p>}
 
       <div className="flex">
         {visible && <video id="local" autoPlay playsInline muted></video>}
