@@ -42,6 +42,7 @@ export default function Join() {
         onClick={showandhidehandler}
       >
         set visibility
+        {visible}
       </button>
 
       <div className="flex">

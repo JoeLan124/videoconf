@@ -54,6 +54,7 @@ export default function Room() {
         onClick={showandhidehandler}
       >
         set visibility
+        {visible}
       </button>
 
       <div className="flex">
