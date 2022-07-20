@@ -6,12 +6,13 @@ export default function Join() {
   const router = useRouter();
   const { id } = router.query;
   const [visible, setvisible] = useState(true);
+  let a = "hidden";
 
   const showandhidehandler = () => {
     setvisible(!visible);
-    // if (visible) {
-    //   window.location.reload();
-    // }
+    {
+      a === "hidden" ? (a = null) : (a = "hidden");
+    }
   };
 
   return (
@@ -44,10 +45,10 @@ export default function Join() {
         set visibility
       </button>
 
-      {!visible && <p>not visible</p>}
-
       <div className="flex">
-        {visible && <video id="local" autoPlay playsInline muted></video>}
+        <div className={`${a}`}>
+          <video id="local" autoPlay playsInline muted></video>
+        </div>
 
         <video id="remote" autoPlay playsInline></video>
       </div>
