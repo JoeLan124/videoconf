@@ -6,13 +6,13 @@ export default function Room() {
   const router = useRouter();
   const { id } = router.query;
   const [visible, setvisible] = useState(true);
-  let a = "hidden";
+  let showStream = true;
 
   const showandhidehandler = () => {
     let newvisiblestatus = !visible;
     setvisible(newvisiblestatus);
     {
-      a === "hidden" ? (a = null) : (a = "hidden");
+      showStream ? (showStream = false) : (showStream = true);
     }
   };
 
@@ -63,7 +63,7 @@ export default function Room() {
       {!visible && <p>not visible</p>}
 
       <div className="flex">
-        <div className={`${a}`}>
+        <div className={`${showStream ? "flex" : "hidden"}`}>
           <video id="local" autoPlay playsInline muted></video>
         </div>
         <video id="remote" autoPlay playsInline></video>

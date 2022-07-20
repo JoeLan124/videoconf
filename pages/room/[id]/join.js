@@ -6,12 +6,12 @@ export default function Join() {
   const router = useRouter();
   const { id } = router.query;
   const [visible, setvisible] = useState(true);
-  let a = "hidden";
+  let showStream = true;
 
   const showandhidehandler = () => {
     setvisible(!visible);
     {
-      a === "hidden" ? (a = null) : (a = "hidden");
+      showStream ? (showStream = false) : (showStream = true);
     }
   };
 
@@ -46,7 +46,7 @@ export default function Join() {
       </button>
 
       <div className="flex">
-        <div className={`${a}`}>
+        <div className={`${showStream ? "flex" : "hidden"}`}>
           <video id="local" autoPlay playsInline muted></video>
         </div>
 
